@@ -17,9 +17,9 @@ namespace dictionaries
 
             List<(string ticker, int shares, double price)> purchases = new List<(string, int, double)>();
 
-            purchases.Add((ticker: "GE", shares: 150, price: 23.21));
-            purchases.Add((ticker: "GE", shares: 32, price: 17.87));
-            purchases.Add((ticker: "GE", shares: 80, price: 19.02));
+            purchases.Add((ticker: "GM", shares: 150, price: 23.21));
+            purchases.Add((ticker: "GM", shares: 32, price: 17.87));
+            purchases.Add((ticker: "GM", shares: 80, price: 19.02));
             purchases.Add((ticker: "CAT", shares: 90, price: 21.04));
             purchases.Add((ticker: "CAT", shares: 47, price: 21.04));
             purchases.Add((ticker: "NAP", shares: 129, price: 1.04));
@@ -33,37 +33,27 @@ namespace dictionaries
             purchases.Add((ticker: "HRTZ", shares: 330, price: 0.05));
 
             // Create a total ownership report that computes the total value of each stock that you have purchased. 
-            // This is the basic relational database join algorithm between two tables.
 
-            /* 
-                Define a new Dictionary to hold the aggregated purchase information.
-                - The key should be a string that is the full company name.
-                - The value will be the valuation of each stock (price*amount)
-            */
+            Dictionary<string, double> aggPurchases = new Dictionary<string, double>();
 
-            // string GM = stocks["GM"];   <--- "General Motors"
-            
-            Dictionary<string, int> aggPurchases = new Dictionary<string, int>();
-            
-            /* 
-                {
-                    "General Electric": 35900,
-                    "AAPL": 8445,
-                    ...
-                }
-            */
-
-            // Iterate over the purchases and 
             foreach ((string ticker, int shares, double price) purchase in purchases)
             {
+                string comName = stocks[purchase.ticker];
                 // Does the company name key already exist in the report dictionary?
-
-                // If it does, update the total valuation
-
-                // If not, add the new key and set its value
+                if (stocks.ContainsKey(purchase.ticker)) {
+                    
+                    // If it does, update the total valuation
+                    if (aggPurchases.ContainsKey(comName)) {
+                        aggPurchases[comName] += (purchase.price * purchase.shares);
+                    // If not, add the new key and set its value
+                    }else{
+                        aggPurchases.Add(comName, purchase.price * purchase.shares);
+                    }
+                }
             }
-
-            Console.WriteLine("Hello World!");
+            foreach(KeyValuePair<string, double> aggTots in aggPurchases) {
+            Console.WriteLine($"{aggTots.Key}, {aggTots.Value}");
+            }
         }
     }
 }

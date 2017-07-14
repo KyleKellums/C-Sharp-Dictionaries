@@ -1,0 +1,8 @@
+/Users/Kyle/workspace/csharp/exercises/C-Sharp-Dictionaries/bin/Debug/netcoreapp1.1/dictionaries.deps.json
+/Users/Kyle/workspace/csharp/exercises/C-Sharp-Dictionaries/bin/Debug/netcoreapp1.1/dictionaries.runtimeconfig.json
+/Users/Kyle/workspace/csharp/exercises/C-Sharp-Dictionaries/bin/Debug/netcoreapp1.1/dictionaries.runtimeconfig.dev.json
+/Users/Kyle/workspace/csharp/exercises/C-Sharp-Dictionaries/bin/Debug/netcoreapp1.1/dictionaries.dll
+/Users/Kyle/workspace/csharp/exercises/C-Sharp-Dictionaries/bin/Debug/netcoreapp1.1/dictionaries.pdb
+/Users/Kyle/workspace/csharp/exercises/C-Sharp-Dictionaries/obj/Debug/netcoreapp1.1/dictionaries.AssemblyInfo.cs
+/Users/Kyle/workspace/csharp/exercises/C-Sharp-Dictionaries/obj/Debug/netcoreapp1.1/dictionaries.dll
+/Users/Kyle/workspace/csharp/exercises/C-Sharp-Dictionaries/obj/Debug/netcoreapp1.1/dictionaries.pdb
